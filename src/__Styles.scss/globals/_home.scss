@@ -1,0 +1,471 @@
+@use "../utils" as u;
+
+section {
+	margin: 2.5em 0;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: u.$ff-inter;
+	height: 350px;
+	border-radius: 0.3em;
+	background: #ebebeb;
+}
+
+.section--intro {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 30px;
+	min-width: 0;
+	min-height: 0;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.25em;
+	font-family: u.$ff-inter;
+	text-align: center;
+
+	&__img {
+		width: 100%;
+		border-radius: 0.3em;
+
+		&:last-of-type {
+			width: 294px;
+		}
+	}
+
+	&__title {
+		margin: 1.2em auto 0;
+		width: 90%;
+	}
+
+	&__info {
+		margin: 0em auto;
+		width: 90%;
+	}
+}
+
+.Hospital__categories {
+	margin: 5em 0;
+}
+
+.Hospital {
+	position: relative;
+
+	.Hospital__heading {
+		font-family: u.$ff-inter;
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+
+	.Hospital__info {
+		font-family: u.$ff-inter;
+		font-size: 1rem;
+		opacity: 0.6;
+		margin: 0.9em 0;
+		font-weight: 400;
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		margin: 3em 0 0;
+		gap: 1.5rem;
+	}
+
+	&__card {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+
+	&__img {
+		width: 100%;
+		border-radius: 0.3em;
+		box-shadow: 0px 31px 80px rgba(0, 0, 0, 0.06),
+			0px 11.3155px 23.7353px rgba(0, 0, 0, 0.0329753),
+			0px 5.49347px 11.6038px rgba(0, 0, 0, 0.0257701),
+			0px 2.693px 5.95738px rgba(0, 0, 0, 0.025519),
+			0px 1.06482px 2.48173px rgba(0, 0, 0, 0.019708);
+	}
+
+	&__type {
+		font-family: u.$ff-inter;
+		font-weight: 500;
+		font-size: 1.25rem;
+		white-space: pre-wrap;
+		margin: 1.25em 0;
+		line-height: 2rem;
+		text-align: center;
+	}
+}
+
+.Doctor {
+	position: relative;
+
+	&__heading {
+		font-family: u.$ff-inter;
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+
+	&__info {
+		font-family: u.$ff-inter;
+		font-size: 1rem;
+		opacity: 0.6;
+		margin: 0.9em 0;
+		font-weight: 400;
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		margin: 3em 0;
+		gap: 1.5rem;
+	}
+
+	&__card {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	&__img {
+		width: 100%;
+		border-radius: 50%;
+		margin: 0 0 0.8em;
+	}
+
+	&__type {
+		font-family: u.$ff-inter;
+		font-weight: 500;
+		font-size: 1.25rem;
+	}
+
+	&__consult {
+		font-family: u.$ff-inter;
+		color: u.$lightBlue;
+		font-weight: 500;
+		font-size: 1.15rem;
+	}
+}
+
+.Health {
+	&__categories {
+		margin: 2em 0;
+	}
+}
+
+.Health {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		gap: 1.2em;
+		text-align: center;
+		position: relative;
+
+		&:first-child {
+			display: block;
+			position: relative;
+			top: -35px;
+			text-align: start;
+		}
+	}
+
+	&__heading {
+		font-family: u.$ff-inter;
+		font-weight: 600;
+		font-size: 1.25rem;
+	}
+
+	&__info {
+		font-family: u.$ff-inter;
+		opacity: 0.6;
+		font-size: 1rem;
+		margin: 0.9em 0;
+		font-weight: 400;
+		width: 80%;
+	}
+
+	&__type {
+		font-family: u.$ff-inter;
+		font-weight: 500;
+		font-size: 1rem;
+		letter-spacing: -0.01em;
+		width: 90%;
+		text-align: start;
+	}
+
+	&__btn {
+		width: 100%;
+		text-align: end;
+		color: u.$lightBlue;
+		font-family: u.$ff-inter;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		font-size: 1.15rem;
+	}
+}
+
+.Medicine__category {
+	margin: 5em 0 0;
+}
+
+.Medicine {
+	position: relative;
+
+	&__heading {
+		font-family: u.$ff-inter;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.25rem;
+		letter-spacing: -0.01em;
+	}
+
+	&__info {
+		font-family: u.$ff-inter;
+		opacity: 0.6;
+		font-size: 1rem;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+		margin: 0.9em 0;
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		gap: 1.8em;
+		margin: 3em 0;
+	}
+
+	&__card {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-direction: column;
+		gap: 1.7em;
+		filter: drop-shadow(0px 31px 80px rgba(0, 0, 0, 0.06))
+			drop-shadow(0px 11.3155px 23.7353px rgba(0, 0, 0, 0.0329753))
+			drop-shadow(0px 5.49347px 11.6038px rgba(0, 0, 0, 0.0257701))
+			drop-shadow(0px 2.693px 5.95738px rgba(0, 0, 0, 0.025519))
+			drop-shadow(0px 1.06482px 2.48173px rgba(0, 0, 0, 0.019708));
+	}
+
+	&__img {
+		width: 100%;
+		border-radius: 0.4em;
+	}
+
+	&__type {
+		font-family: u.$ff-inter;
+		font-size: 1.2rem;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+		text-align: center;
+	}
+}
+
+.spliter {
+	width: 200%;
+	margin: 6.2em 0;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	position: relative;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+
+	&--lastLine {
+		margin: 6.2rem 0 0 !important;
+	}
+}
+
+.aboutus {
+	&__card {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		gap: 1.75em;
+	}
+
+	&__sideArrow {
+		position: absolute;
+		top: 30%;
+		right: 10%;
+	}
+
+	&__heading {
+		font-family: u.$ff-inter;
+		font-size: 1.25rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+	}
+
+	&__info {
+		font-family: u.$ff-inter;
+		font-style: italic;
+		font-weight: 400;
+		font-size: 1rem;
+		text-align: center;
+		letter-spacing: -0.01em;
+		width: 620px;
+		line-height: 1.25rem;
+	}
+
+	&__name {
+		font-family: u.$ff-inter;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 2.05rem;
+
+		text-align: center;
+		letter-spacing: -0.01em;
+	}
+
+	&__location {
+		color: #3a3a3a;
+		position: relative;
+		top: -12px;
+		font-family: u.$ff-inter;
+		font-style: normal;
+		font-weight: 200;
+		font-size: 0.8rem;
+		line-height: 2.05rem;
+		text-align: center;
+		letter-spacing: -0.01em;
+	}
+
+	&__dotsContainer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+	}
+
+	&__dots {
+		width: 7px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: #c4c4c4;
+
+		&--active {
+			width: 8px;
+			background-color: #000000;
+		}
+	}
+}
+
+.download__container {
+	padding: 3.75em 0 0;
+	margin: 0 0;
+	width: 100vw;
+	position: relative;
+	left: calc((100% - 100vw) / 2);
+	background: #f3f8fd;
+}
+
+.download {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+
+	&__card {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: column;
+		gap: 3em;
+	}
+
+	&__heading {
+		font-family: u.$ff-inter;
+		font-weight: 600;
+		font-size: 1.5rem;
+		letter-spacing: -0.01em;
+	}
+
+	&__info {
+		font-family: u.$ff-inter;
+		font-size: 1rem;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+		opacity: 0.6;
+		width: 540px;
+		margin: 1em 0 0;
+	}
+
+	&__para {
+		font-family: u.$ff-inter;
+		font-weight: 600;
+		font-size: 1rem;
+		letter-spacing: -0.01em;
+		margin: 0 0 1em;
+	}
+
+	&__inputContainer {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 1.25em;
+		font-family: u.$ff-inter;
+		margin: 0 0 2em;
+	}
+
+	&__number {
+		font-family: u.$ff-inter;
+		background-color: white;
+		color: black;
+		border: 1px solid u.$lightBlue;
+		border-radius: 0.3em;
+		padding: 0.5em 0.25em;
+
+		&::placeholder {
+			color: black;
+			font-family: u.$ff-inter;
+			font-weight: 600;
+		}
+	}
+
+	&__sendSMS {
+		font-family: u.$ff-inter;
+		background: u.$lightBlue;
+		color: white;
+		font-size: 1rem;
+		letter-spacing: -0.01em;
+		border: none;
+		padding: 0.5em 1.25em;
+		border-radius: 0.3em;
+	}
+
+	&__link {
+		margin: 0 0.5em 0 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #3a3a3a;
+		color: white;
+		padding: 0.5em 0.5em;
+		border-radius: 0.3em;
+	}
+}

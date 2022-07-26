@@ -1,0 +1,117 @@
+@use "../utils" as u;
+
+.slotConfirmation {
+	&__container {
+		box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
+			0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	}
+
+	&__appointmentTime {
+		margin: 5.5em 0 0;
+		text-align: center;
+
+		> span {
+			width: 280px;
+			font-family: u.$ff-inter;
+			font-size: 1.25rem;
+			letter-spacing: -0.01em;
+			font-weight: 700;
+			line-height: 1.5em;
+		}
+	}
+}
+
+.patient {
+	&__container {
+		width: 500px;
+		margin: 2em auto;
+
+		> div {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 1.2em 0 0;
+
+			> p {
+				font-family: u.$ff-inter;
+				font-weight: 600;
+				font-size: 1.15rem;
+				letter-spacing: -0.01em;
+			}
+		}
+
+		:is(table.patient__details, table.patient__charges) {
+			width: 100%;
+			background-color: #f3f1f1a1;
+			padding: 1.5em 1.5em;
+			margin: 1.5em 0 0;
+			border-radius: 0.3em;
+
+			td {
+				font-family: u.$ff-inter;
+				font-weight: 500;
+				font-size: 1.15rem;
+				letter-spacing: -0.01em;
+				padding: 0.15em 0;
+				text-align: start;
+
+				&:first-of-type {
+					width: 55%;
+				}
+
+				&:last-of-type {
+					p {
+						padding: 0 0 0 2em;
+					}
+				}
+			}
+		}
+
+		table.patient__charges {
+			td {
+				padding: 0.5em 0 !important;
+			}
+
+			tbody {
+				position: relative;
+
+				&::before {
+					content: "";
+					width: 100%;
+					height: 1.5px;
+					background-color: #e6e6e6;
+					position: absolute;
+					left: 0;
+					bottom: 40px;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+
+	&__edit {
+		font-size: 1.15rem;
+		font-family: u.$ff-inter;
+		letter-spacing: -0.01em;
+		color: u.$lightBlue;
+	}
+
+	&__price {
+		color: u.$lightBlue;
+	}
+
+	&__saveBtn {
+		font-family: u.$ff-inter;
+		font-size: 1.25rem;
+		letter-spacing: -0.01em;
+		font-weight: 700;
+		padding: 1em 3em;
+		border-radius: 0.3em;
+		background-color: u.$lightBlue;
+		color: white;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 1em 0 3em 0;
+	}
+}

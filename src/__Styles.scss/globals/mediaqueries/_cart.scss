@@ -1,0 +1,138 @@
+@use "../../utils" as u;
+
+@include u.breakpoint-down(medium) {
+	header {
+		display: none;
+	}
+
+	body {
+		width: min(100%, 424px);
+		margin: 0 auto;
+	}
+
+	.cartMedicineItems {
+		&__container {
+			width: 100%;
+			grid-template-columns: repeat(1, minmax(min(300px, 100%), 1fr));
+
+			> p {
+				font-size: u.rem(14px);
+				margin: 0 0 0 u.em(3px);
+			}
+		}
+
+		&__totalPricing {
+			> div {
+				> div {
+					&:last-of-type {
+						p {
+							font-size: u.rem(14px);
+						}
+					}
+
+					> p {
+						&:last-of-type {
+							width: 60px;
+						}
+
+						&:last-of-type {
+							> span {
+								font-size: u.rem(15px);
+							}
+						}
+					}
+				}
+			}
+
+			> p {
+				> img {
+					width: 45px;
+					padding-right: u.em(8px);
+				}
+
+				span {
+					font-size: u.rem(14px);
+					transform: translateY((-12px));
+				}
+			}
+
+			> div {
+				padding: u.em(12px) u.em(10px) 0;
+			}
+		}
+
+		&__toBePaid {
+			> p {
+				font-size: u.rem(14px) !important;
+			}
+
+			padding: u.em(8px) u.em(2px) !important;
+		}
+
+		&__address {
+			> p {
+				font-size: u.rem(13px);
+			}
+		}
+
+		&__proceed {
+			font-size: u.rem(16px);
+			width: max-content;
+			padding: u.em(12px) u.em(20px);
+		}
+	}
+
+	.cartMedicine {
+		&__container {
+			padding: u.em(16px) u.em(16px);
+			border-radius: u.em(5px);
+
+			> div {
+				align-items: flex-start;
+			}
+
+			> p {
+				font-size: u.rem(12px);
+				margin: u.em(16px) 0;
+			}
+		}
+
+		&__rupeeLogo {
+			font-size: u.rem(15px);
+		}
+
+		&__footer {
+			margin: u.em(16px) 0 0;
+
+			> p {
+				&:first-of-type {
+					font-size: u.rem(10px);
+				}
+
+				img {
+					width: 20px;
+				}
+
+				> button {
+					font-size: u.rem(16px);
+					width: 20px;
+					aspect-ratio: 1;
+				}
+
+				> span {
+					margin: 0 u.em(10px);
+					font-size: u.rem(13px);
+				}
+			}
+		}
+
+		&__name {
+			font-size: u.rem(13px);
+		}
+
+		&__priceDetails {
+			font-size: u.rem(12px);
+			width: 90px;
+		}
+	}
+}

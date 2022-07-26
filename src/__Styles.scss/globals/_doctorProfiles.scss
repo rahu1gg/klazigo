@@ -1,0 +1,48 @@
+@use "../utils" as u;
+
+.doctorProfiledrag {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		width: max-content;
+		margin: 0 auto;
+		gap: u.em(86px);
+
+		* {
+			text-align: center;
+		}
+	}
+
+	&__imgContainer {
+		position: relative;
+		margin: u.em(34px) u.em(34px);
+	}
+
+	&__starsContainer {
+		width: max-content;
+		position: absolute;
+		left: 0;
+		font-family: u.$ff-inter;
+
+		bottom: 0;
+	}
+
+	&__details {
+		> p {
+			opacity: 0.7;
+		}
+
+		> a {
+			background-color: u.$lightBlue;
+			color: white;
+			border-radius: u.em(4px);
+			padding: u.em(10px) 0;
+			width: 100%;
+		}
+
+		* {
+			margin: u.em(11px) 0 0 0;
+			font-family: u.$ff-inter;
+		}
+	}
+}

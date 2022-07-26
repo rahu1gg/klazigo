@@ -1,0 +1,224 @@
+@use "../utils" as u;
+
+.nmap {
+	&__links {
+		font-size: 1rem;
+		font-family: u.$ff-inter;
+		font-weight: 300;
+		letter-spacing: -0.01em;
+		margin: 0 2.22em 0 0;
+		border-bottom: 2px solid black;
+		display: inline-block;
+		position: relative;
+
+		&:last-of-type {
+			&::before {
+				display: none;
+			}
+		}
+
+		&::before {
+			content: ">";
+			position: absolute;
+			top: 1px;
+			right: -22px;
+		}
+	}
+}
+
+.medicine {
+	&__type {
+		text-align: center;
+		font-family: u.$ff-inter;
+		font-size: 1.25rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		margin: 2em 0 1em 0;
+	}
+
+	&__filtersAndSortContainer {
+		margin: 0 0 0 auto;
+		width: max-content;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 3.15em;
+	}
+
+	:is(&__sortContainer, &__filterContainer) {
+		position: relative;
+	}
+
+	:is(&__sortByBtn, &__filterByBtn) {
+		background-color: white;
+		border: none;
+		color: u.$lightBlue;
+		font-weight: 500;
+		font-size: 1.21rem;
+		font-family: u.$ff-inter;
+		letter-spacing: -0.01em;
+		padding: 0 0 0.45em 0;
+
+		~ div {
+			display: none;
+
+			&:hover {
+				display: block;
+			}
+		}
+
+		:is(&:hover, &:focus) {
+			cursor: pointer;
+
+			~ div {
+				display: block;
+			}
+		}
+	}
+
+	&__filterOptions {
+		// left: 0;
+		left: 100% !important;
+		transform: translateX(-100%);
+		padding: 0.25em 0 !important;
+
+		label {
+			margin: 0 !important;
+		}
+	}
+
+	:is(&__sortOptions, &__filterOptions) {
+		width: max-content;
+		padding: 0.75em 0em;
+		border: 1.5px solid u.$lightBlue;
+		position: absolute;
+		top: 90%;
+		right: 0;
+		left: 0;
+		background-color: white;
+		border-radius: 0.3em;
+		z-index: 20;
+		overflow-x: hidden;
+
+		label {
+			display: block;
+			font-family: u.$ff-inter;
+			font-size: 1rem;
+			font-weight: 400;
+			position: relative;
+			padding: 0.45em 1.5em;
+			margin: -0.5em 0;
+			border-radius: 0.3em;
+
+			&:hover {
+				cursor: pointer;
+				background-color: hsla(212, 56%, 46%, 0.2);
+			}
+
+			&:last-child {
+				&::before {
+					display: none;
+				}
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				height: 1.5px;
+				width: 115%;
+				top: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: #b6b6b67c;
+			}
+		}
+	}
+
+	&__sortFilterDivider {
+		width: 1.5px;
+		border-radius: 5px;
+		height: 37px;
+		background-color: #b6b6b67c;
+	}
+
+	&__adsContainer {
+		text-align: center;
+		margin: 2.8em 0 5.3125em 0;
+	}
+
+	&__boxex {
+		width: max-content;
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		gap: 1.8em;
+		margin: 0 auto;
+	}
+}
+
+.medicineCard {
+	width: 185px;
+	position: relative;
+
+	&__isFavoriteImg {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__imgContainer {
+		border: 0.5px solid rgba(0, 0, 0, 0.37);
+		border-radius: 0.3em;
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__productName {
+		margin: 1.15em 0 0;
+		font-size: 1rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		font-family: u.$ff-inter;
+	}
+
+	&__costPrice {
+		margin: 1.65em 0 0;
+		font-size: 0.8rem;
+		letter-spacing: -0.01em;
+		font-weight: 200;
+		opacity: 0.7;
+		font-family: u.$ff-inter;
+	}
+
+	table {
+		margin: 0.5em 0 0;
+		width: 100%;
+
+		tr td:last-of-type {
+			text-align: end;
+		}
+	}
+
+	&__sellingPrice {
+		font-size: 1.5rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		font-family: u.$ff-inter;
+	}
+
+	&__discount {
+		font-size: 0.75rem;
+		font-family: u.$ff-inter;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		background-color: u.$lightBlue;
+		color: white;
+		border-radius: 2px;
+		padding: 0.25em 0.3em;
+	}
+}

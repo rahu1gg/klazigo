@@ -1,0 +1,44 @@
+[
+	{ "hospital_name": "Yashoda Hospitals", "street": "0 Karstens Park", "city": "Hyderabad" },
+	{ "hospital_name": "Care Hospitals", "street": "629 Straubel Plaza", "city": "Chennai" },
+	{ "hospital_name": "Andha Hospitals", "street": "5345 Sutteridge Place", "city": "Bnagalore" },
+	{ "hospital_name": "Rainbow Hospitals", "street": "7 Karstens Circle", "city": "Vijayawada" },
+	{ "hospital_name": "Medicover Hospitals", "street": "5298 Johnson Lane", "city": "Pune" },
+	{
+		"hospital_name": "KIMS",
+		"street": "47233 Merchant Park",
+		"city": "Delhi",
+		"state": "Värmland"
+	},
+	{ "hospital_name": "Sunflower Hospitals", "street": "3707 Nevada Avenue", "city": "Delhi" },
+	{ "hospital_name": "Apollo Hospitals", "street": "36 Melody Road", "city": "Bangalore" },
+	{ "hospital_name": "Ozone Hospitals", "street": "72 Rutledge Parkway", "city": "Vijayawada" },
+	{ "hospital_name": "Ayush Hospitals", "street": "33564 Sutherland Lane", "city": "Chennai" },
+	{ "hospital_name": "Ramesh Hospitals", "street": "258 Arapahoe Road", "city": "Hyderabad" },
+	{
+		"hospital_name": "Vijaya Super speciality Hospitals",
+		"street": "25 Schmedeman Place",
+		"city": "Delhi"
+	},
+	{ "hospital_name": "Sunshine Hospitals", "street": "2 Mallory Pass", "city": "Chennai" },
+	{ "hospital_name": "Star Hospitals", "street": "1 Crest Line Street", "city": "Bngalore" },
+	{ "hospital_name": "Care Hospitals", "street": "9 Kipling Drive", "city": "Vijayawada" },
+	{ "hospital_name": "Help Hospitals", "street": "69720 Bobwhite Lane", "city": "Pune" },
+	{ "hospital_name": "NRI Hospitals", "street": "30286 Mallard Crossing", "city": "Pune" },
+	{ "hospital_name": "Olive Hospitals", "street": "77107 Eliot Hill", "city": "Delhi" },
+	{ "hospital_name": "NIMS Hospitals", "street": "4915 Moland Alley", "city": "Banaglore" },
+	{ "hospital_name": "Citizens Hospitals", "street": "3 Pine View Lane", "city": "Delhi" },
+	{ "hospital_name": "Global Hospitals", "street": "7 Portage Road", "city": "Hyderabad" },
+	{ "hospital_name": "Kamineni Hospitals", "street": "45 Algoma Park", "city": "Hyderabad" },
+	{
+		"hospital_name": "Chaitanya Eye  Hospitals ",
+		"street": "02 Schiller Alley",
+		"city": "Chennai"
+	},
+	{ "hospital_name": "Vasan Eye Care Hospitals", "street": "93 Starling Pass", "city": "Pune" },
+	{
+		"hospital_name": "Rainbow Childrens  Hospitals",
+		"street": "68989 Bartelt Junction",
+		"city": "Bangalore"
+	}
+]

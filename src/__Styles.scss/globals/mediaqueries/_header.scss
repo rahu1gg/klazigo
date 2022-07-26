@@ -1,0 +1,35 @@
+@use "../../utils" as u;
+
+@include u.media(u.em(1024px)) {
+	.nav {
+		&__logo {
+			width: 80px;
+		}
+
+		&__items {
+			gap: u.em(12px);
+		}
+
+		&__item {
+			font-size: u.rem(18px);
+
+			&:last-child {
+				margin: 0 0 0 u.em(24px);
+			}
+		}
+	}
+
+	.section2 {
+		&__select {
+			width: u.em(100px);
+
+			&#section2__hospitalNameInput {
+				width: clamp(u.em(330px), 45vw, u.em(600px)) !important;
+			}
+		}
+
+		&__needHelp p {
+			font-size: u.rem(14px);
+		}
+	}
+}

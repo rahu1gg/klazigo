@@ -1,0 +1,115 @@
+@use "../../utils" as u;
+
+@include u.breakpoint-down(medium) {
+	header {
+		display: none !important;
+	}
+
+	body {
+		width: min(100%, 424px);
+	}
+
+	footer {
+		display: none;
+	}
+
+	.backLink {
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+
+		:is(Link, p) {
+			display: inline-block;
+		}
+
+		img {
+			width: 27px;
+		}
+
+		p {
+			padding: 0 u.em(20px);
+			transform: translateY(-2px);
+			font-family: u.$ff-inter;
+			font-size: u.rem(18px);
+			font-weight: 500;
+			letter-spacing: -0.01em;
+		}
+	}
+
+	.appointment {
+		&__container {
+			box-shadow: none;
+			width: 100%;
+			padding: 0 0 !important;
+		}
+	}
+
+	.card {
+		padding: u.em(23px) 0 u.em(70px) 0;
+
+		&__sectionInfo {
+			top: 50px;
+		}
+
+		&__img {
+			width: 115px;
+		}
+
+		&__name {
+			font-size: u.rem(14px);
+		}
+
+		&__qualification {
+			font-size: u.rem(12px);
+		}
+
+		&__experience {
+			font-size: u.rem(12px);
+			width: 175px;
+		}
+
+		&__btnContainer {
+			margin: u.em(57px) 0 0;
+		}
+
+		&__lineDivider {
+			display: none;
+		}
+	}
+
+	.slot {
+		&__boxex {
+			width: u.em(58px);
+			aspect-ratio: 1;
+			border-radius: u.em(2px);
+
+			p {
+				font-size: u.rem(14px);
+				padding: 0 u.em(2px);
+			}
+		}
+
+		&__container {
+			margin: u.em(21.5px) 0 0;
+		}
+
+		&__morningImg {
+			width: 19px;
+		}
+
+		&__heading p {
+			font-size: u.rem(14px);
+		}
+
+		&__availableTime {
+			gap: u.em(7px);
+			margin: u.em(14px) 0;
+		}
+	}
+
+	.button {
+		font-size: u.rem(14px);
+		margin: u.em(34px) 0;
+		padding: u.em(17px) u.em(75px);
+	}
+}

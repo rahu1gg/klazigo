@@ -1,0 +1,183 @@
+.app {
+	margin: 0px;
+}
+
+.line {
+	height: 1rem;
+	margin: 0rem;
+	border-color: rgba(0, 0, 0, 0.25);
+}
+
+.loc {
+	display: None;
+}
+
+.gap {
+	width: 1430px;
+	height: 15px;
+	background: #eaeaea;
+}
+
+.path {
+	position: absolute;
+	top: 129px;
+	margin-left: 97px;
+	color: #000000;
+}
+
+.underline {
+	text-decoration: underline;
+	color: black;
+}
+
+.bell {
+	margin-top: 8px;
+	width: 19.43px;
+	height: 23.14px;
+	margin-left: 100px;
+}
+
+.cart {
+	margin-top: 8px;
+	width: 19.43px;
+	height: 23.14px;
+	margin-left: 40px;
+}
+
+.firstline {
+	display: flex;
+	margin-left: 97px;
+	margin-right: 97px;
+	/* align-items: center; */
+}
+
+.title {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 42px;
+	text-align: center;
+	letter-spacing: -0.01em;
+	color: #000000;
+	margin-top: 25px;
+	margin-left: 97px;
+	margin-bottom: 40px;
+}
+
+.category {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 42px;
+	letter-spacing: -0.01em;
+	padding-left: 100px;
+	padding-right: 80px;
+
+	color: #000000;
+}
+
+.help {
+	width: 98px;
+	height: 42px;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 42px;
+	letter-spacing: -0.01em;
+	margin-left: 950px;
+	color: #000000;
+	z-index: 1;
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+	.title {
+		margin-left: 30px;
+		margin-top: 10px;
+		width: 500px;
+		height: 42px;
+
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 42px;
+		/* identical to box height, or 233% */
+
+		text-align: left;
+		letter-spacing: -0.01em;
+
+		color: #000000;
+	}
+
+	.line {
+		display: none;
+	}
+
+	.searchbarInput {
+		display: none;
+	}
+
+	.search {
+		display: none;
+	}
+
+	.loc {
+		display: flex;
+		position: absolute;
+		width: 100px;
+		height: 32px;
+		left: 30px;
+		top: 43px;
+
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 200;
+		font-size: 12px;
+		line-height: 42px;
+		/* or 350% */
+
+		text-align: left;
+		letter-spacing: -0.01em;
+
+		color: #3473b9;
+	}
+
+	.locimg {
+		margin-top: 15px;
+		width: 10.19px;
+		height: 13.71px;
+	}
+
+	.path {
+		display: none;
+	}
+
+	.help {
+		display: none;
+	}
+
+	.bell {
+		position: absolute;
+		height: 24px;
+		width: 20px;
+		left: 195px;
+		top: 45.623046875px;
+		border-radius: 0px;
+	}
+
+	.cart {
+		position: absolute;
+		height: 24px;
+		width: 24px;
+		left: 290px;
+		top: 45.623046875px;
+		border-radius: 0px;
+	}
+
+	.location {
+		display: none;
+	}
+}

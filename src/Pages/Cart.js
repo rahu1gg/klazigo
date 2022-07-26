@@ -1,9 +1,13 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-vars */
 
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useLayoutEffect, useEffect, useReducer } from "react";
+import { Link, useLocation } from "react-router-dom";
 import MedicineItemInCart from "./Data/Medicineitemincart";
+
+import { reducer } from "../Components/utils/reducer.js";
+import { axiosGet } from "../Components/utils/axios.js";
+
 import trashCanIcon from "../Images/trashCan.png";
 import coupon from "../Images/Coupon.png";
 import location from "../Images/location.png";
@@ -38,6 +42,22 @@ const CartMedicineDetail = (props) => {
 };
 
 function Cart() {
+	const { pathname } = useLocation();
+
+	const [{ loading, error, data }, dispatch] = useReducer(reducer, {
+		loading: true,
+		data: [],
+		error: "",
+	});
+
+	useLayoutEffect(() => {
+		const user = localStorage.getItem("user");
+
+		axiosGet(`${pathname}?user=${user}`, dispatch);
+	}, [pathname]);
+
+	console.log(data);
+
 	const [cartItems, setCartItems] = useState(
 		MedicineItemInCart.map((val) => ({
 			...val,
@@ -126,71 +146,77 @@ function Cart() {
 
 	return (
 		<>
-			<section>
-				<div className="cartMedicineItems__container">
-					<p>Items({cartItems.length})</p>
-					<div>{CartMedicineDetailComponent}</div>
-					<div className="cartMedicineItems__totalPricing">
-						<p>
-							<img src={coupon} alt="couponImg" />
-							<span>Apply Coupon</span>
-						</p>
-						<div>
-							<div>
-								<p>Item Total(MRP)</p>
-								<p>
-									<span>₹</span>
-									{costPriceOfAllItems}
-								</p>
-							</div>
-							<div className="cartMedicineItems__discount">
-								<p>Price Discount</p>
-								<p>
-									<span>₹</span>
-									{costPriceOfAllItems - sellingPriceOfAllItems}
-								</p>
-							</div>
-							<hr />
-							<div>
-								<p>Shipping Fee</p>
-								<p>
-									<span>₹</span> {shippingCharges}
-								</p>
-							</div>
-							<div>
-								<p>Packaging Fee</p>
-								<p>
-									<span>₹</span> 0
-								</p>
-							</div>
-							<hr />
-							<div className="cartMedicineItems__toBePaid">
-								<p>To Be Paid</p>
-								<p>
-									<span>₹</span>
-									{sellingPriceOfAllItems + shippingCharges}
-								</p>
-							</div>
-							<div>
-								<p>Total Saving</p>
-								<p>
-									<span>₹</span>
-									{costPriceOfAllItems - sellingPriceOfAllItems}
-								</p>
-							</div>
-						</div>
-						<div className="cartMedicineItems__address">
-							<p>Delivery Address</p>
+			{loading ? (
+				<div>Loading...</div>
+			) : error ? (
+				<div>Error...</div>
+			) : (
+				<section>
+					<div className="cartMedicineItems__container">
+						<p>Items({cartItems.length})</p>
+						<div>{CartMedicineDetailComponent}</div>
+						<div className="cartMedicineItems__totalPricing">
 							<p>
-								<img src={location} alt="LocationImg" /> New Delhi
+								<img src={coupon} alt="couponImg" />
+								<span>Apply Coupon</span>
 							</p>
+							<div>
+								<div>
+									<p>Item Total(MRP)</p>
+									<p>
+										<span>₹</span>
+										{costPriceOfAllItems}
+									</p>
+								</div>
+								<div className="cartMedicineItems__discount">
+									<p>Price Discount</p>
+									<p>
+										<span>₹</span>
+										{costPriceOfAllItems - sellingPriceOfAllItems}
+									</p>
+								</div>
+								<hr />
+								<div>
+									<p>Shipping Fee</p>
+									<p>
+										<span>₹</span> {shippingCharges}
+									</p>
+								</div>
+								<div>
+									<p>Packaging Fee</p>
+									<p>
+										<span>₹</span> 0
+									</p>
+								</div>
+								<hr />
+								<div className="cartMedicineItems__toBePaid">
+									<p>To Be Paid</p>
+									<p>
+										<span>₹</span>
+										{sellingPriceOfAllItems + shippingCharges}
+									</p>
+								</div>
+								<div>
+									<p>Total Saving</p>
+									<p>
+										<span>₹</span>
+										{costPriceOfAllItems - sellingPriceOfAllItems}
+									</p>
+								</div>
+							</div>
+							<div className="cartMedicineItems__address">
+								<p>Delivery Address</p>
+								<p>
+									<img src={location} alt="LocationImg" /> New Delhi
+								</p>
+							</div>
+							<Link className="cartMedicineItems__proceed" to="/">
+								Proceed to Check Out
+							</Link>
 						</div>
-						<Link className="cartMedicineItems__proceed" to="/">
-							Proceed to Check Out
-						</Link>
 					</div>
-				</div>
-			</section>
+				</section>
+			)}
 		</>
 	);
 }

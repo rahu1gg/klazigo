@@ -1,0 +1,75 @@
+@use "../../utils" as u;
+
+@include u.breakpoint-down(medium) {
+	body {
+		width: min(100%, 424px);
+	}
+
+	.nmap {
+		display: none;
+	}
+
+	.medicine {
+		&__filtersAndSortContainer {
+			margin: 0 auto;
+			width: min(100vw, 424px);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: hsla(0, 0%, 71%, 1);
+		}
+
+		&__adsContainer {
+			width: min(100vw, 424px);
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			margin: 0 0 u.em(18px);
+
+			> img {
+				width: 100%;
+			}
+		}
+
+		:is(&__sortByBtn, &__filterByBtn, &__) {
+			font-size: u.rem(16px);
+			padding: u.em(7px) 0;
+			background-color: hsla(0, 0%, 71%, 1);
+		}
+
+		&__boxex {
+			width: 95%;
+			grid-template-columns: repeat(2, minmax(min(130px, 100%), 1fr));
+			gap: u.em(20px);
+		}
+	}
+
+	.medicineCard {
+		// width: 150px;
+		width: auto;
+
+		&__productName {
+			font-size: u.rem(14px);
+		}
+
+		&__costPrice {
+			font-size: u.rem(11px);
+			margin: u.em(20px) 0 0;
+		}
+
+		&__sellingPrice {
+			font-size: u.rem(15px);
+		}
+
+		&__discount {
+			font-size: u.rem(11px);
+		}
+	}
+
+	footer {
+		display: none;
+	}
+}

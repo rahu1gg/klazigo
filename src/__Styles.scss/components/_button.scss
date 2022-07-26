@@ -1,0 +1,17 @@
+@use "../utils" as u;
+
+.btn {
+	position: absolute;
+	top: 0.5em;
+	right: 1.25em;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1.25rem;
+	text-align: center;
+	color: u.$lightBlue;
+	border: 2px solid u.$lightBlue;
+	border-radius: 5px;
+	padding: 0.5em 0.75em;
+	background-color: white;
+}

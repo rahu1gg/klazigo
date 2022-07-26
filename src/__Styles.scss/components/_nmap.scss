@@ -1,0 +1,36 @@
+@use "../utils" as u;
+
+.page {
+	&__nmap {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: u.em(36px);
+		margin: u.em(16px) 0 0 u.em(6px);
+	}
+
+	&__options {
+		&:last-of-type {
+			.page__links {
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__links {
+		font-family: u.$ff-inter;
+		font-size: u.rem(16px);
+		text-decoration: underline;
+		position: relative;
+
+		&::before {
+			content: ">";
+			position: absolute;
+			top: 0;
+			right: -20px;
+			font-family: u.$ff-inter;
+		}
+	}
+}

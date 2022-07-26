@@ -1,0 +1,304 @@
+@use "../utils" as u;
+
+.cartMedicineItems {
+	&__container {
+		width: min(100%, 1036px);
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 60% 40%;
+		gap: 1em;
+
+		> p {
+			grid-column: 1 / -1;
+			font-family: u.$ff-inter;
+			font-size: u.rem(16px);
+			letter-spacing: -0.01em;
+			font-weight: 500;
+			color: #000000e5;
+			margin: 0 0 0.85em 0;
+		}
+
+		> div {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-direction: column;
+			gap: 1em;
+			width: 100%;
+		}
+	}
+
+	&__totalPricing {
+		> p {
+			width: 100%;
+			border: 0.4px solid #e0e0e0;
+			box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+				0px 0px 1px rgba(0, 0, 0, 0.04);
+
+			span {
+				font-family: u.$ff-inter;
+				font-weight: 500;
+				font-size: 1rem;
+				letter-spacing: -0.01em;
+				margin: 0 0 0 7px;
+				transform: translateY(-15px);
+			}
+
+			> img {
+				padding: 6px 0.75em;
+			}
+		}
+
+		> div {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-direction: column;
+			gap: 0.9em;
+			padding: 1.75em 1.5em 0;
+			overflow-x: hidden;
+			border: 0.4px solid #e0e0e0;
+			box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+				0px 0px 1px rgba(0, 0, 0, 0.04);
+
+			> div {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0 0.1em;
+
+				&:last-of-type {
+					background-color: #ddfeda;
+					padding: 1rem 1.5em;
+					width: calc(100% + 3em);
+
+					p {
+						font-size: 1rem;
+						font-family: u.$ff-inter;
+						letter-spacing: 0.5px;
+						color: #565555e5;
+						font-weight: 600;
+					}
+				}
+
+				> p {
+					width: auto;
+					font-family: u.$ff-inter;
+					font-size: 0.85rem;
+					letter-spacing: -0.01em;
+					font-weight: 300;
+					opacity: 0.9;
+				}
+
+				> p:last-of-type {
+					width: 75px;
+
+					> span {
+						font-size: 1.05rem;
+						transform: translate(-2px, 1px);
+						opacity: 0.8;
+					}
+				}
+			}
+
+			hr {
+				height: 1px;
+				border-radius: 5px;
+				width: 100%;
+				background-color: #b6b6b6;
+				border: none;
+				outline: none;
+			}
+		}
+	}
+
+	&__toBePaid {
+		padding: 1.2em 0.1em !important;
+
+		> p {
+			font-size: 1rem !important;
+			font-weight: 600 !important;
+			letter-spacing: 0.5px !important;
+			color: #565555e5 !important;
+		}
+	}
+
+	&__discount {
+		> p:last-of-type {
+			position: relative !important;
+
+			&::before {
+				content: "-";
+				position: absolute;
+				left: 0;
+				top: 0;
+				transform: translate(-150%, -2.25px);
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	&__address {
+		width: 100%;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: space-between !important;
+		flex-direction: row !important;
+		padding: 1em 1.5em !important;
+
+		> p {
+			font-family: u.$ff-inter;
+			font-size: 0.95rem;
+			font-weight: 500;
+
+			&:last-of-type {
+				color: u.$lightBlue;
+
+				> img {
+					transform: translate(-6px, 3.5px);
+					width: 13px;
+				}
+			}
+		}
+	}
+
+	&__proceed {
+		font-size: 1.25rem;
+		font-family: u.$ff-inter;
+		font-weight: 500;
+		letter-spacing: 0.5px;
+		padding: 0.75em 0;
+		width: 100%;
+		text-align: center;
+		background-color: u.$lightBlue;
+		color: white;
+		border-radius: 0.3em;
+	}
+}
+
+.cartMedicine {
+	&__container {
+		padding: 1.5em 2.325em;
+		width: 100%;
+		border: 0.4px solid #e0e0e0;
+		box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+			0px 0px 1px rgba(0, 0, 0, 0.04);
+
+		> div {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		> p {
+			font-size: 0.85rem;
+			font-weight: 500;
+			color: black;
+			opacity: 0.7;
+			font-family: u.$ff-inter;
+			letter-spacing: -0.01em;
+			margin: 1.25em 0;
+			white-space: pre-wrap;
+			line-height: 1.75em;
+		}
+	}
+
+	&__name {
+		font-family: u.$ff-inter;
+		font-weight: 500;
+		font-size: 1rem;
+		letter-spacing: -0.01em;
+		width: 363px;
+		line-height: 1.5em;
+	}
+
+	&__priceDetails {
+		font-size: 0.85rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		color: u.$lightBlue;
+		font-family: u.$ff-inter;
+		text-align: center;
+
+		> span:not(.cartMedicine__rupeeLogo) {
+			font-size: 0.65rem;
+			color: #8c8b8b;
+			padding: 0 3px;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100%;
+				height: 0.25px;
+				border-radius: 5px;
+				left: 0;
+				background-color: #8c8b8b;
+			}
+		}
+	}
+
+	&__rupeeLogo {
+		font-size: 1.1rem;
+		margin: 0 3px;
+		position: relative;
+		transform: translateY(1px);
+	}
+
+	&__footer {
+		margin: 2em 0 0;
+
+		> p {
+			font-family: u.$ff-inter;
+			font-size: 0.85rem;
+			font-weight: 400;
+			letter-spacing: -0.01em;
+			opacity: 0.9;
+
+			&:first-of-type {
+				cursor: pointer;
+			}
+
+			img {
+				position: relative;
+				transform: translateY(5px);
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			> button {
+				width: 25px;
+				aspect-ratio: 1;
+				border: 1px solid u.$lightBlue;
+				border-radius: 50%;
+				text-align: center;
+				background-color: white;
+				font-weight: 500;
+				font-size: 1.25rem;
+				color: u.$lightBlue;
+
+				:is(&:hover, &:focus) {
+					cursor: pointer;
+					background-color: u.$lightBlue;
+					color: white;
+					transition: 300ms ease;
+				}
+			}
+
+			> span {
+				width: 10px;
+				text-align: center;
+				margin: 0 1em;
+				font-family: u.$ff-inter;
+				font-weight: 500;
+				color: u.$lightBlue;
+			}
+		}
+	}
+}

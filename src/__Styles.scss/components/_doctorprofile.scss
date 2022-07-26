@@ -1,0 +1,96 @@
+@use "../utils" as u;
+
+.card {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 3em 0em 3.85em 0em;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		height: 2px;
+		border-radius: 5px;
+		background-color: #e5e5e5;
+	}
+
+	&__sectionInfo {
+		position: relative;
+		top: 60px;
+	}
+
+	&__lineDivider {
+		width: 2px;
+		height: 250px;
+		background-color: #e5e5e5;
+		justify-items: stretch;
+	}
+
+	&__name {
+		font-family: u.$ff-inter;
+		font-weight: 500;
+		font-size: 1.45rem;
+		letter-spacing: -0.01em;
+	}
+
+	&__qualification {
+		font-family: u.$ff-inter;
+		font-weight: 400;
+		font-size: 1.25rem;
+		letter-spacing: -0.01em;
+	}
+
+	&__experience {
+		font-family: u.$ff-inter;
+		font-size: 1.15rem;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+		margin: 0.9em 0 0;
+		width: 290px;
+		opacity: 0.7;
+		padding: 0 0 0 0.25em;
+	}
+
+	&__btnContainer {
+		margin: 5.5em 0 0;
+		display: flex;
+		align-items: center;
+		justify-items: flex-start;
+		gap: 0.75em;
+	}
+
+	&__btn {
+		font-family: u.$ff-inter;
+		font-size: 0.9rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		outline: none;
+		border-radius: 0.3em;
+		padding: 0.3em 0.25em;
+		transition: 300ms ease;
+
+		&--inactive {
+			border: 2px solid #f3f1f1;
+			color: #000000;
+			background: #f3f1f1;
+		}
+
+		&--active {
+			color: #ffffff;
+			background: u.$lightBlue;
+			border: 2px solid u.$lightBlue;
+		}
+	}
+
+	&__img {
+		width: 245px;
+		border-radius: 50%;
+	}
+}

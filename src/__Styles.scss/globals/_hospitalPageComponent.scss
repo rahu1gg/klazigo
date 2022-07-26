@@ -1,0 +1,116 @@
+@use "../utils" as u;
+
+.hospitalHog {
+	&__section {
+		margin: u.em(28px) 0;
+	}
+
+	&__heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		h4 {
+			font-family: u.$ff-inter;
+		}
+	}
+
+	&__sortBy {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: u.em(7px);
+		font-family: u.$ff-inter;
+
+		p {
+			margin: 0 u.em(7px) 0 0;
+		}
+	}
+	&__buttons {
+		font-family: u.$ff-inter;
+		padding: u.em(2px) u.em(5px);
+		border: none;
+		outline: none;
+		border-radius: u.em(4px);
+		transition: 200ms ease-in;
+
+		&-active {
+			background: u.$lightBlue;
+			color: white;
+		}
+
+		&:is(:hover, :focus) {
+			background-color: u.$lightBlue;
+			color: white;
+			cursor: pointer;
+		}
+	}
+
+	&__totalHospitals {
+		margin: u.em(32px) auto 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: u.em(26px);
+		width: max-content;
+	}
+
+	&__card {
+		width: 292px;
+		box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+			0px 0px 1px rgba(0, 0, 0, 0.04);
+		border-radius: u.em(6px);
+	}
+
+	&__imgContainer {
+		width: 100%;
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__cardDetails {
+		padding: u.em(13px) u.em(13px);
+
+		> div {
+			margin: u.em(9px) 0 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			* {
+				font-family: u.$ff-inter;
+			}
+
+			div {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				* {
+					font-family: u.$ff-inter;
+					color: u.$lightBlue;
+				}
+
+				img {
+					margin: 0 u.em(6px) 0 0;
+				}
+			}
+		}
+
+		a {
+			width: 80%;
+			margin: u.em(9px) auto;
+			text-align: center;
+			font-family: u.$ff-inter;
+			background-color: u.$lightBlue;
+			color: white;
+			padding: u.em(10px) u.em(25px);
+			border-radius: u.em(5px);
+		}
+	}
+
+	&__starIcon {
+		margin: 0 u.em(2px) 0 0 !important;
+	}
+}

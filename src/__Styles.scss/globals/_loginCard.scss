@@ -1,0 +1,139 @@
+@use "../utils" as u;
+
+.slideShow {
+	&__container {
+		position: relative;
+	}
+
+	&__card {
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+		* {
+			font-family: u.$ff-inter;
+			margin: u.em(25px) 0 0 0;
+		}
+
+		img {
+			margin: 0 !important;
+		}
+
+		p {
+			white-space: pre-wrap;
+			line-height: 30px;
+			font-size: u.rem(14px);
+			opacity: 0.7;
+		}
+	}
+}
+
+.loginCard {
+	&__section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin: u.em(0px) !important;
+		position: relative;
+	}
+
+	&__backPointer {
+		position: absolute;
+		top: 0px;
+		left: 5px;
+		background-color: white;
+		border: none;
+		outline: none;
+		z-index: 10;
+
+		&:is(:hover, :focus) {
+			cursor: pointer;
+		}
+
+		img {
+			transform: rotate(-90deg);
+		}
+	}
+
+	&__card {
+		border-left: 1px solid rgba(0, 0, 0, 0.4);
+		padding: u.em(20px) u.em(20px);
+		width: 368px;
+
+		* {
+			font-family: u.$ff-inter;
+			display: block;
+		}
+
+		> :is(p, label) {
+			font-size: u.rem(14px);
+		}
+
+		a {
+			display: inline-block;
+		}
+	}
+
+	&__info {
+		margin: u.em(14px) 0 0 0;
+	}
+
+	&__label {
+		margin: u.em(75px) 0 0 0;
+	}
+
+	&__input {
+		border: none;
+		outline: none;
+		border-bottom: 2px solid u.$lightBlue;
+		width: 100%;
+		margin: u.em(10px) 0 0 0;
+		appearance: none;
+		font-size: u.rem(24px);
+	}
+
+	&__button {
+		background-color: u.$lightBlue;
+		border-radius: u.em(5px);
+		width: 100%;
+		color: white;
+		padding: u.em(6px) 0;
+		border: none;
+		outline: none;
+		margin: u.em(40px) 0 0 0;
+		font-size: u.rem(24px);
+
+		&:is(:hover, :focus) {
+			cursor: pointer;
+		}
+	}
+
+	:is(&__newUser, &__tnc) {
+		text-align: center;
+	}
+
+	&__newUser {
+		margin: u.em(25px) 0 0 0;
+
+		> a {
+			color: u.$lightBlue;
+		}
+	}
+
+	&__tnc {
+		margin: u.em(14px) 0 0 0;
+		opacity: 0.5;
+		line-height: 20px;
+
+		> a {
+			opacity: 0.6;
+			color: black;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+			display: inline-block;
+		}
+	}
+}

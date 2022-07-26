@@ -1,0 +1,83 @@
+@use "../utils" as u;
+
+.footer {
+	width: 100vw;
+	position: relative;
+	left: calc((100% - 100vw + 17px) / 2);
+	background-color: u.$lightBlue;
+	padding: 5em 0;
+
+	&__container {
+		width: min(100%, 1400px);
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+	}
+
+	&__type {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		gap: 0.75em;
+
+		&:first-of-type {
+			position: relative;
+			top: -7px;
+		}
+	}
+
+	&__klazigoName {
+		color: white;
+		font-family: u.$ff-inter;
+		font-size: 1.75rem;
+		font-weight: 700;
+		letter-spacing: -0.01em;
+		letter-spacing: 0.6px;
+		margin: 0 0 0.4em;
+	}
+
+	&__klazigoLinks {
+		color: white;
+		font-family: u.$ff-inter;
+		font-size: 1.25rem;
+		letter-spacing: -0.01em;
+		font-weight: 500;
+	}
+
+	&__heading {
+		font-family: u.$ff-inter;
+		margin: 0 0 1em;
+		font-weight: 700;
+		font-size: 1.25rem;
+		color: white;
+		letter-spacing: -0.01em;
+	}
+
+	&__link {
+		font-family: u.$ff-inter;
+		font-size: 1rem;
+		opacity: 0.8;
+		letter-spacing: -0.01em;
+		font-weight: 300;
+		color: white;
+	}
+
+	&__imgContainer {
+		margin: 7em 0 0;
+		text-align: center;
+	}
+
+	&__img {
+		width: 200px;
+	}
+
+	&__copyright {
+		font-family: u.$ff-inter;
+		font-size: 0.75rem;
+		letter-spacing: -0.01em;
+		opacity: 0.6;
+		font-weight: 200;
+		color: white;
+	}
+}

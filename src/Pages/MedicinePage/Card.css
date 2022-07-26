@@ -1,0 +1,61 @@
+.medicard {
+	width: 186px;
+	height: 320px;
+	border-radius: 5px;
+	border: none;
+}
+
+.imgs {
+	margin-bottom: 30px;
+	max-width: 186px;
+	max-height: 179px;
+}
+
+.texts {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	letter-spacing: -0.01em;
+	color: #000000;
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+	.imgs {
+		width: 104px;
+		height: 100px;
+		margin-bottom: 7px;
+		filter: drop-shadow(0px 31px 80px rgba(0, 0, 0, 0.06))
+			drop-shadow(0px 11.3155px 23.7353px rgba(0, 0, 0, 0.0329753))
+			drop-shadow(0px 5.49347px 11.6038px rgba(0, 0, 0, 0.0257701))
+			drop-shadow(0px 2.693px 5.95738px rgba(0, 0, 0, 0.025519))
+			drop-shadow(0px 1.06482px 2.48173px rgba(0, 0, 0, 0.019708));
+	}
+
+	.texts {
+		/* position: absolute; */
+		width: 93px;
+		height: 19px;
+		/* left: 24px; */
+		/* top: 3px; */
+
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		/* or 143% */
+
+		text-align: center;
+		letter-spacing: -0.01em;
+
+		color: #000000;
+	}
+	.card {
+		width: 104px;
+		height: 126px;
+		margin-bottom: 25px;
+	}
+}

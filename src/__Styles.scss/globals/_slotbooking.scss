@@ -1,0 +1,119 @@
+@use "../utils" as u;
+
+// |READ_ME:  For doctor profile component SCSS is in the |FOLDER: components/doctorprofile.scss
+
+.commonContainer {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.backLink {
+	display: none;
+}
+
+.appointment {
+	&__container {
+		width: 90%;
+		margin-inline: auto;
+		padding: 0 3em 2em;
+		box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
+			0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	}
+}
+
+.slot {
+	&__container {
+		margin: 3.3125em 0 0;
+	}
+
+	:is(&__morningSlots, &__afternoonSlots) {
+		width: max-content;
+		margin: 0 auto;
+	}
+
+	&__heading {
+		width: auto;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 5px;
+
+		p {
+			font-size: 1.15rem;
+			font-weight: 300;
+			color: #787777;
+			font-family: u.$ff-inter;
+			letter-spacing: -0.01em;
+		}
+	}
+
+	&__morningImg {
+		width: 24px;
+	}
+
+	&__availableTime {
+		width: max-content;
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 1.25rem;
+		margin: 2.15em auto;
+	}
+
+	&__boxex {
+		width: 150px;
+		aspect-ratio: 1;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 0.15em;
+		border: 1px solid u.$lightBlue;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: 300ms ease;
+
+		p {
+			font-family: u.$ff-inter;
+			font-size: 1.25rem;
+			text-align: center;
+			font-weight: 500;
+			letter-spacing: -0.01em;
+			transition: 300ms ease;
+		}
+
+		:is(&--unselected, &:hover) {
+			background-color: white;
+			cursor: pointer;
+
+			p {
+				color: u.$lightBlue;
+			}
+		}
+
+		:is(&--selected, &:hover) {
+			background-color: u.$lightBlue;
+			cursor: pointer;
+
+			p {
+				color: white;
+			}
+		}
+	}
+}
+
+.button {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: u.$ff-inter;
+	font-size: 1.25rem;
+	letter-spacing: -0.01em;
+	font-weight: 700;
+	text-align: center;
+	color: white;
+	background-color: u.$lightBlue;
+	border: 1px solid u.$lightBlue;
+	border-radius: 0.3em;
+	padding: 1.25em 5.6875em;
+	margin: 2.4125em 0;
+}
